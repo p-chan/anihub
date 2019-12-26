@@ -1,0 +1,30 @@
+{
+  "name": "anihub",
+  "version": "1.0.0",
+  "description": "アニメに関するウェブサービスをつなぐプラットフォーム",
+  "license": "MIT",
+  "author": "P-Chan",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prestart": "run-s clean build",
+    "start": "node .",
+    "dev": "nodemon --exec ts-node -- -r tsconfig-paths/register ./src/index.ts",
+    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "format": "prettier --write \"./src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.6",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.6.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "private": true
+}
